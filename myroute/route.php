@@ -1,39 +1,41 @@
 <?php
+ini_set('display_errors', 1);
+
 class Route {
-	private $_uri = [];
-	//private $_method = array();
+	private $_uri = array();
+	private $_method = array();
 
 	/**
 	 * Builds a collection of internal URL's to look for
 	 * @param type $uri
 	 */
-	public function add($uri, $method = null) {
-		$this->uri[] = $uri;
-	}
 
-	/*
-		$this->uri[] = '/' . trim($uri, '/');
+	public function add($uri, $method = null) {
+		$this->_uri[] = '/' . trim($uri, '/');
+
+		//echo "/basename: " . '/' . basename($uri);
+		//echo '<br />';
+		//$this->_uri[] = '/' . basename($uri);
+
 		if ($method != null) {
-			this->method[] = $method;
+			$this->_method[] = $method;
 		}
 	}
-	   */
+	
 	public function	submit() {
-		$_REQUEST['uri'];
-				echo "before get!"
-
-		/*
-		$uriGetParam = isset($_GET['uri']) ? $_GET(['uri']) : '/';
-		foreach($this->uri as $key => $value) {
+		//$uriGetParam = isset($_GET['uri']) ? $_GET['uri'] : '/';
+		$uriGetParam = isset($_GET['uri']) ? '/' . basename($_GET['uri']) : '/';
+		foreach($this->_uri as $key => $value) {
 			if (preg_match("#^$value$#", $uriGetParam)) {
-				echo "match!"
-				
-				//$useMethod = $this->_method([$key]);
-				//new $useMethod; 
+				if (is_string($this->_method[$key])) {
+					$useMethod = $this->_method[$key];
+					new $useMethod();
+				} else {
+					call_user_func($this->_method[$key]);					
+				}
+
 			} 
 		}
-		*/
-		
 	}
 }
 

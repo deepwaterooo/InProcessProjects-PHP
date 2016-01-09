@@ -4,11 +4,13 @@ if (!isset($head))
 {
     $head = array(); 
 }
+
 $head['title'] = array_key_exists('title', $head)
     ? $head['title'].' &mdash; '
     : '';
 
 ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US">
 <head>
@@ -16,4 +18,4 @@ $head['title'] = array_key_exists('title', $head)
     <title><?php echo $head['title']; ?>Router</title>
 </head>
 <body>
-    <h1>Header</h1>
+    <h1>Deepwaterooo's Personal Website~!</h1>

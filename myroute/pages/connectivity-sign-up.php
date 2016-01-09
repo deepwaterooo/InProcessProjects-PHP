@@ -20,7 +20,7 @@ function NewUser() {
 }
 
 function SignUp() {
-	if(!empty($_POST['user'])) {//checking the 'user' name which is from Sign-Up.html, is it empty or have some text
+	if(!empty($_POST['user'])) {
 		$query = mysql_query("SELECT * FROM WebsiteUsers WHERE userName = '$_POST[user]' AND pass = '$_POST[pass]'") or die(mysql_error()); 
 		if(!$row = mysql_fetch_array($query) or die(mysql_error())) {
 			newuser(); 

@@ -1,0 +1,20 @@
+php_flag display_errors 1
+
+<IfModule mod_rewirte.c>
+<IfModule mod_negotiation.c>
+Options -MultiViews
+</IfModule>
+
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^(.*)/$ /$1 [L, R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#RewriteRule ^(.+)$ index.php?uri=$1 [QSA,L]
+RewriteRule ^ index.php [L]
+
+</IfModule>
+

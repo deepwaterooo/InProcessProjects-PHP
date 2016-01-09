@@ -1,51 +1,40 @@
-e <?php
+<?php
+include '../template/header.php';
+
 class About {
 	public function __construct() {
 		echo "this is the About Me About page";
 		$this->_other();
 	}
 	protected function _other() {
-		echo "this is the other dlfkjdkjflldkfjdklfjd"
+		echo "this is the other dlfkjdkjflldkfjdklfjd";
 	}
 }
+
 ?>
 
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Sign-Up</title>
+    <title>About Me~~</title>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body id="body-color">
     <div id="Sign-Up">
-      <fieldset style="width:30%"><legend>Registration Form</legend>
+      <fieldset style="width:30%"><legend>Me Items: </legend>
 	<table border="0">
-	  <tr>
-	    <form method="POST" action="connectivity-sign-up.php">
-	      <td>Name</td><td><input type="text" name="name"></td>
-	  </tr>
-	  <tr>
-	    <td>Email</td><td><input type="text" name="email"></td>
-	  </tr>
-	  <tr>
-	    <td>UserName</td><td>
-	      <input type="text" name="user"></td>
-	  </tr>
-	  <tr>
-	    <td>Password</td><td>
-	      <input type="password" name="pass"></td>
-	  </tr>
-	  <tr>
-	    <td>Confirm Password
-	    </td><td><input type="password" name="cpass"></td>
-	  </tr>
-	  <tr>
-	    <td><input id="button" type="submit" name="submit" value="Sign-Up"></td>
-	  </tr>
-	    </form>
+	  <tr><td>Name: </td><td><td>deepwaterooo</td></tr>
+	  <tr><td>Gender: </td><td><td>Female</td></tr>
+	  <tr><td>Hobie: </td><td><td>Programming...</td></tr>
+	  <tr><td>Current Interest: </td><td><td>Programming & Programming...</td></tr>
+	  <tr><td></td><td><td></td></tr>
 	</table>
       </fieldset>
     </div>
   </body>
 </html>
+
+<?php
+include '../template/footer.php';
+?>
 

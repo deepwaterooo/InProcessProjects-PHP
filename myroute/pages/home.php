@@ -1,16 +1,13 @@
 <?php
-include '../template/header.php';
-
-class Login {
+class Home {
 	public function __construct() {
-		echo "this is the Signup/Login page";
+		echo "this is the Home page";
 		$this->_other();
 	}
 	protected function _other() {
-		echo "this is the other Signup/Login";
+		echo "home";
 	}
 }
-
 ?>
 
 <!DOCTYPE HTML>
@@ -21,7 +18,7 @@ class Login {
   </head>
   <body id="body-color">
     <div id="Sign-Up">
-      <fieldset style="width:30%"><legend>Signup Registration Form</legend>
+      <fieldset style="width:30%"><legend>Registration Form</legend>
 	<table border="0">
 	  <tr>
 	    <form method="POST" action="connectivity-sign-up.php">
@@ -52,6 +49,3 @@ class Login {
   </body>
 </html>
 
-<?php
-include '../template/footer.php';
-?>
